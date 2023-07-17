@@ -23,7 +23,6 @@ public class SecurityConfig {
         http.csrf().disable();
         http.authorizeRequests()
                 .antMatchers("/user/**").authenticated()
-                //.antMatchers("/admin/**").access("hasRole('ROLE_ADMIN')") => admin 할지말지 정하기
                 .anyRequest().permitAll()
                 .and()
                 .oauth2Login()

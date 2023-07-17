@@ -64,7 +64,6 @@ public class PrincipalDetails implements UserDetails, OAuth2User{
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         Collection<GrantedAuthority> collet = new ArrayList<GrantedAuthority>();
-        //collet.add(()->{ return user.getRole();}); => admin, user 구분 할지 말지
         return collet;
     }
 
@@ -76,8 +75,6 @@ public class PrincipalDetails implements UserDetails, OAuth2User{
 
     // User의 PrimaryKey => 이름이 getname이라서 name을 받을 건지 primarykey인 id 받을 건지 정하기
     @Override
-    public String getName() {
-        return user.getId()+"";
-    }
+    public String getName() { return user.getUser_id()+""; }
 
 }

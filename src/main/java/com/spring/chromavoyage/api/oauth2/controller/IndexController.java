@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.Iterator;
 
-@Controller
+@Controller // view return
 public class IndexController {
 
     @Autowired
@@ -28,12 +28,12 @@ public class IndexController {
 
     @GetMapping("/user")
     public @ResponseBody String user(@AuthenticationPrincipal PrincipalDetails principal) {
-        //System.out.println("Principal : " + principal);
+
         System.out.println("OAuth2 : "+principal.getUser().getProvider());
         System.out.println("User-name : "+principal.getUser().getUsername());
         System.out.println("User-email : "+principal.getUser().getEmail());
         System.out.println("User-picture : "+principal.getUser().getPicture());
-        // iterator 순차 출력 해보기
+
         Iterator<? extends GrantedAuthority> iter = principal.getAuthorities().iterator();
         while (iter.hasNext()) {
             GrantedAuthority auth = iter.next();
