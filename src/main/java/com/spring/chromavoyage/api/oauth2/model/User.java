@@ -23,7 +23,6 @@ public class User {
     private int id;
     private String username;
     private String email;
-    //private String role; //ROLE_USER, ROLE_ADMIN
     private String provider;
     private String picture;
     @CreationTimestamp

@@ -1,16 +1,13 @@
 package com.spring.chromavoyage.api.oauth2.controller;
 
 import com.spring.chromavoyage.api.oauth2.config.auth.PrincipalDetails;
-import com.spring.chromavoyage.api.oauth2.model.User;
 import com.spring.chromavoyage.api.oauth2.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.Iterator;
@@ -49,16 +46,4 @@ public class IndexController {
     public String login() {
         return "login";
     }
-    /*
-    @GetMapping("/admin")
-    public @ResponseBody String admin() {
-        return "어드민 페이지입니다.";
-    }
-
-    @GetMapping("/join")
-    public String join() {
-        return "join";
-    }
-
-*/
 }

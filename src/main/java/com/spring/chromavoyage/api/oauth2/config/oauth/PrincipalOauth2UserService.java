@@ -41,18 +41,12 @@ public class PrincipalOauth2UserService extends DefaultOAuth2UserService {
         //user가 회원가입이 되어 있는 경우
         if (userOptional.isPresent()) {
             user = userOptional.get();
-            // user가 존재하면 update 해주기 => 기능 추가 y or n
-			/*user.setUsername(oAuth2UserInfo.getName());
-			user.setEmail(oAuth2UserInfo.getEmail());
-			user.setPicture(oAuth2UserInfo.getPicture());
-			userRepository.save(user);*/
-            System.out.println("회원가입 되어 있어 로그인 되었습니다.");
+            System.out.println("로그인 되었습니다.");
         } else { // user가 회원가입되어 있지 않으므로 자동으로 회원가입
             user = User.builder()
                     .username(oAuth2UserInfo.getName())
                     .email(oAuth2UserInfo.getEmail())
                     .picture(oAuth2UserInfo.getPicture())
-                    //.role("ROLE_USER")
                     .provider(oAuth2UserInfo.getProvider())
                     .build();
             userRepository.save(user);
