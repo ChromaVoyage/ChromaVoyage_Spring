@@ -73,7 +73,7 @@ public class PrincipalDetails implements UserDetails, OAuth2User{
         return attributes;
     }
 
-    // User의 PrimaryKey => 이름이 getname이라서 name을 받을 건지 primarykey인 id 받을 건지 정하기
+    // User의 PrimaryKey return
     @Override
     public String getName() { return user.getUser_id()+""; }
 

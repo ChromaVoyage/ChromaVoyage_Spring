@@ -9,7 +9,9 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import java.util.Collection;
 import java.util.Iterator;
 
 @Controller // view return
@@ -42,8 +44,9 @@ public class IndexController {
 
         return "유저 페이지입니다.";
     }
-    @GetMapping("/login")
-    public String login() {
+   @GetMapping("/login")
+    public String login(@AuthenticationPrincipal PrincipalDetails principal, RedirectAttributes redirectAttributes) {
+        redirectAttributes.addFlashAttribute(principal);
         return "login";
     }
 }
