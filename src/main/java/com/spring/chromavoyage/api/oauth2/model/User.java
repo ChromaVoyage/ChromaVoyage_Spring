@@ -1,20 +1,15 @@
 package com.spring.chromavoyage.api.oauth2.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Timestamp;
 
 @Builder
-@Data
-@Entity
+@Getter
+@Entity(name = "USER")
 @NoArgsConstructor
 @AllArgsConstructor
 public class User {
@@ -26,5 +21,15 @@ public class User {
     private String provider;
     private String picture;
     @CreationTimestamp
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "Asia/Seoul")
+    @Column(name = "create_date")
     private Timestamp createDate;
+
+    public void updateNmAndPicture(String username, String picture){
+        this.username = username;
+        this.picture = picture;
+    }
+    public void updateProvider(String provider){
+        this.provider = provider;
+    }
 }
