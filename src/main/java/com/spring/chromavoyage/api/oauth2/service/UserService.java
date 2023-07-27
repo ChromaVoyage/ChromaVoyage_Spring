@@ -13,4 +13,6 @@ public interface UserService extends OAuth2UserService<OAuth2UserRequest, OAuth2
     OAuth2User loadUser(OAuth2UserRequest userRequest) throws OAuth2AuthenticationException;
     String getNaverAuthorizeUrl() throws URISyntaxException, MalformedURLException, UnsupportedEncodingException;
     OAuth2User getAuthenticatedUser();
-    }
+
+    String getGoogleAuthorizeUrl()throws URISyntaxException, MalformedURLException, UnsupportedEncodingException;
+}

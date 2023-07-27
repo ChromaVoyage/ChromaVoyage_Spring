@@ -36,7 +36,7 @@ public class SecurityConfig {
                 .userService(principalOauth2UserService)
                 .and()
                 .redirectionEndpoint()
-                .baseUri("/main");
+                .baseUri("/login/oauth2/code/**");
 
         return http.build();
     }

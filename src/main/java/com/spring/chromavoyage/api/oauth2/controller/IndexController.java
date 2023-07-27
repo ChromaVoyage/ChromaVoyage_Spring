@@ -54,9 +54,15 @@ public class IndexController {
 
         return "유저 페이지입니다.";
     }
+    private final UserService userService;
     @GetMapping("/login")
-    public String login() {
-        return "login";
+    public void loginGoole(HttpServletRequest request, HttpServletResponse response) throws MalformedURLException, UnsupportedEncodingException, URISyntaxException {
+        String url = userService.getGoogleAuthorizeUrl();
+        try {
+            response.sendRedirect(url);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
     /*
     @GetMapping("/admin")
@@ -70,7 +76,7 @@ public class IndexController {
     }
 
 */
-    private final UserService userService;
+    //private final UserService userService;
     @GetMapping("users/login/naver")
     public void loginNaver(HttpServletRequest request, HttpServletResponse response) throws MalformedURLException, UnsupportedEncodingException, URISyntaxException {
         String url = userService.getNaverAuthorizeUrl();
