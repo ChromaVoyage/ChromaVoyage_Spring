@@ -15,13 +15,9 @@ import java.sql.Timestamp;
 public class User {
     @Id // primary key
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "user_id")
-    private int id;
-    @Column(name = "name")
+    private int user_id;
     private String username;
     private String email;
-    //private String role; //ROLE_USER, ROLE_ADMIN
-
     private String provider;
     private String picture;
     @CreationTimestamp
