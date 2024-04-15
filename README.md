@@ -3,12 +3,12 @@
 <img width="500" height="300" alt="image" src="https://github.com/ChromaVoyage/ChromaVoyage_Spring/assets/121854089/cd471648-d0b3-4073-843e-c04a1fa8d2fe"></p>
 
 
-# Overview
+## Overview
 
 "Chroma Voyage" is a travel record service. It combines the Greek word "Chroma," meaning color, with the French word "Voyage," meaning travel, to create a platform where users can personalize their journey by coloring visited areas on a map with their own unique color. By creating groups with fellow travelers, users can plan itineraries for visited areas and efficiently manage their travel records by storing detailed information such as locations and photos. This enables easy tracking of who, when, and where memories were made, ensuring users can cherish the joy of their travels for years to come.
 
 
-# For End Users
+## For End Users
 * ### Login Page<br />
 1. Login to the service via Google login.<br />
 <img width="700" height="350" alt="image" src="https://github.com/ChromaVoyage/ChromaVoyage_Spring/assets/83761366/60b5feb2-f3bb-4265-a868-4ca793051edb"></p>
@@ -58,16 +58,16 @@
 <img width="700" height = "350" alt="image" src="https://github.com/ChromaVoyage/ChromaVoyage_Spring/assets/79713943/97445a1b-7a8f-454f-8e2c-1cef5580bf7a"></p>
 
 
-* ## Profile<br />
+* ### Profile<br />
 1. Click on the bottom left of the main page allows users to edit their own profile.<br />
 <img width="700" height="350" alt="image" src="https://github.com/ChromaVoyage/ChromaVoyage_Spring/assets/79713943/e43825e6-ed80-4c74-974d-3106344c4895"></p>
 
 
-# Licenses
+## Licenses
 
 Distributed under the MIT License. See <a href='License'>License</a> for more information.
 
-# Contact
+## Contact
 
 * Jimin Oh
 * Eunjin Woo :
